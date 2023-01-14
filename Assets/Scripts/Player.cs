@@ -43,10 +43,14 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
+        if (Input.GetButtonDown("Jump") == true)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpforce);
             //state = State.jumping;
+        }
+        else if (Input.GetButtonDown("Jump") == false)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
         }
 
         //VelocityState();
