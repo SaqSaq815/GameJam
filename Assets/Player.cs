@@ -23,17 +23,25 @@ public class Player : MonoBehaviour
     {
         float hDirection = Input.GetAxis("Horizontal");
 
-        while (hDirection < 0)
+        if (hDirection < 0)
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
             transform.localScale = new Vector2(-1, 1);
+            
         }
 
-        while (hDirection > 0)
+        else if (hDirection > 0)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
             transform.localScale = new Vector2(1, 1);
         }
+
+        else if (hDirection == 0)
+        {
+            transform.localScale = new Vector2(1, 1);
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
 
         if (Input.GetButtonDown("Jump") && coll.IsTouchingLayers(ground))
         {
