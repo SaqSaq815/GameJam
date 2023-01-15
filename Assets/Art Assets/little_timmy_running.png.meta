@@ -132,12 +132,12 @@ TextureImporter:
       name: little_timmy_running_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 20
-        height: 30
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -153,12 +153,12 @@ TextureImporter:
       name: little_timmy_running_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 32
         y: 0
-        width: 20
-        height: 31
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: little_timmy_running_2
       rect:
         serializedVersion: 2
-        x: 68
+        x: 64
         y: 0
-        width: 20
-        height: 31
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -195,12 +195,12 @@ TextureImporter:
       name: little_timmy_running_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 96
         y: 0
-        width: 20
-        height: 31
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: little_timmy_running_4
       rect:
         serializedVersion: 2
-        x: 132
+        x: 128
         y: 0
-        width: 20
-        height: 31
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: little_timmy_running_5
       rect:
         serializedVersion: 2
-        x: 164
+        x: 160
         y: 0
-        width: 20
-        height: 31
-      alignment: 1
-      pivot: {x: 0, y: 1}
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,7 +268,6 @@ TextureImporter:
       little_timmy_running_0: -954139729
       little_timmy_running_4: 48202938
       little_timmy_running_3: 2143225758
-      little_timmy_running_6: -2062662936
       little_timmy_running_1: -1919763586
       little_timmy_running_2: -92081368
       little_timmy_running_5: -864013356
