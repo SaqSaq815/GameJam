@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
+
 public class Player : MonoBehaviour
 {
     private float horizontal;
@@ -14,6 +15,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
+    public SpriteRenderer door;
+    public Sprite opendoor;
+
 
     public PostProcessVolume volume;
     private ColorGrading colorGrading;
@@ -23,6 +27,8 @@ public class Player : MonoBehaviour
     public static bool isNight;
 
     private int orbCounter;
+
+    private bool isOpen;
 
     private void Awake()
     {
@@ -58,11 +64,13 @@ public class Player : MonoBehaviour
         }
 
         nightCycle();
+       
     }
 
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        openDoor();
     }
 
     private bool IsGrounded()
@@ -98,8 +106,30 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Orb"))
         {
             orbCounter++;
-            print("collected " + orbCounter);
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Door"))
+        {
+            if (isOpen)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    void openDoor()
+    {
+        var collect = Random.Range(2, 4);
+
+        if (orbCounter > collect)
+        {
+            door.sprite = opendoor;
+            isOpen = true;
         }
     }
 
