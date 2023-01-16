@@ -9,6 +9,7 @@ public class PlayScript : MonoBehaviour
     public GameObject option;
     public GameObject credit;
     public GameObject creditCan;
+    public GameObject optionCan;
 
     public void Play()
     {
@@ -22,6 +23,7 @@ public class PlayScript : MonoBehaviour
         option.SetActive(false);
         credit.SetActive(false);
         creditCan.SetActive(false);
+        optionCan.SetActive(false);
     }
     public void Options()
     {
@@ -29,6 +31,7 @@ public class PlayScript : MonoBehaviour
         option.SetActive(true);
         credit.SetActive(false);
         creditCan.SetActive(false);
+        optionCan.SetActive(true);
     }
     public void Credit()
     {
@@ -36,6 +39,7 @@ public class PlayScript : MonoBehaviour
         option.SetActive(false);
         credit.SetActive(true);
         creditCan.SetActive(true);
+        optionCan.SetActive(false);
     }
 
     public void Home()
