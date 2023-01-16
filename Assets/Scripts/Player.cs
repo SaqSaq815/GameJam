@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +13,24 @@ public class Player : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+
+    public PostProcessVolume volume;
+    private ColorGrading colorGrading;
+
+
+    private float timerCountDown = 4;
+    public static bool isNight;
+
+    private int orbCounter;
+
+    private void Awake()
+    {
+        volume = GameObject.FindWithTag("MainCamera").GetComponent<PostProcessVolume>();
+        volume.profile.TryGetSettings(out colorGrading);
+
+        orbCounter = 0;
+    }
 
     void Update()
     {
@@ -28,6 +47,17 @@ public class Player : MonoBehaviour
         }
 
         Flip();
+
+        if (timerCountDown > 0)
+        {
+            timerCountDown -= Time.deltaTime;
+        }
+        else
+        {
+            timerCountDown = 0;
+        }
+
+        nightCycle();
     }
 
     private void FixedUpdate()
@@ -51,5 +81,26 @@ public class Player : MonoBehaviour
         }
     }
 
+    void nightCycle()
+    {
+     
+        if (timerCountDown == 0)
+        {
+            isNight = true;
+            colorGrading.enabled.value = true;
+            colorGrading.saturation.value = -100f;
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Orb"))
+        {
+            orbCounter++;
+            print("collected " + orbCounter);
+            Destroy(collision.gameObject);
+        }
+    }
 
 }

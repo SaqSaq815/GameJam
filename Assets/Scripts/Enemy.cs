@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Bson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,15 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform player;
-    public float moveSpeed = 1f;
+    public float moveSpeed = 0.2f;
     private Rigidbody2D rb;
     private Vector2 movement;
 
+
+    private void Awake()
+    {
+       
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +30,8 @@ public class Enemy : MonoBehaviour
         //rb.rotation = angle;
         direction.Normalize();
         movement = direction;
+
+        changeSpeed();
     }
 
     void FixedUpdate()
@@ -35,5 +43,15 @@ public class Enemy : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
+
+    void changeSpeed()
+    {
+        if (Player.isNight)
+        {
+            moveSpeed = 5f;
+        }
+    }
+
+
 
 }
