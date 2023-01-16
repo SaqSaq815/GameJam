@@ -98,8 +98,12 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Orb"))
         {
             orbCounter++;
-            print("collected " + orbCounter);
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            print("touched enemy");
         }
     }
 
