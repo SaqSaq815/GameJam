@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private ColorGrading colorGrading;
 
 
-    private float timerCountDown = 4;
+    private float timerCountDown = 6f;
     public static bool isNight;
 
     private int orbCounter;

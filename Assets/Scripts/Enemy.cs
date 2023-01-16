@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
     {
         if (Player.isNight)
         {
-            moveSpeed = 5f;
+            moveSpeed = 3f;
         }
     }
 
