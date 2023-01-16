@@ -7,8 +7,8 @@ using UnityEngine.Rendering.PostProcessing;
 public class Player : MonoBehaviour
 {
     private float horizontal;
-    private float speed = 8f;
-    private float jumpingPower = 16f;
+    private float speed = 6f;
+    private float jumpingPower = 12f;  //16
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
 
     void openDoor()
     {
-        var collect = Random.Range(2, 4);
+        var collect = Random.Range(2, 6);
 
         if (orbCounter > collect)
         {

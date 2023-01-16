@@ -6,7 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public Transform player;
-    public float moveSpeed = 0.2f;
+    public float moveSpeed = 0.1f;
     private Rigidbody2D rb;
     private Vector2 movement;
 
@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
     {
         if (Player.isNight)
         {
-            moveSpeed = 3f;
+            moveSpeed = 2f;
         }
     }
 
