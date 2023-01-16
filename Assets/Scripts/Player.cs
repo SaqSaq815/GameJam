@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public SpriteRenderer door;
     public Sprite opendoor;
 
+    public int collect;
 
     public PostProcessVolume volume;
     private ColorGrading colorGrading;
@@ -34,7 +35,8 @@ public class Player : MonoBehaviour
     {
         volume = GameObject.FindWithTag("MainCamera").GetComponent<PostProcessVolume>();
         volume.profile.TryGetSettings(out colorGrading);
-
+        collect = Random.Range(2, 6);
+        print(collect);
         orbCounter = 0;
     }
 
@@ -124,9 +126,7 @@ public class Player : MonoBehaviour
 
     void openDoor()
     {
-        var collect = Random.Range(2, 6);
-
-        if (orbCounter > collect)
+        if (orbCounter == collect)
         {
             door.sprite = opendoor;
             isOpen = true;
