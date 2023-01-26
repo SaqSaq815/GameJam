@@ -12,7 +12,7 @@ Our main character is Lil Timmy and he's on an adventure to collect dream orbs a
 ![little_timmy_running](https://user-images.githubusercontent.com/77903214/214737744-cd3e67d1-2583-4743-a643-aa563e33c69b.gif)
 
 ## Nightmare Creatures
-- These are corrupted creatures that lives inside the children's nightmare
+- These are corrupted creatures that live inside the children's nightmare
 ## Bat Nightmare
 ![bat_nightmare](https://user-images.githubusercontent.com/77903214/214736895-6699a06e-2498-4889-b42b-a4dc04efe80f.gif)
 
@@ -30,8 +30,8 @@ Space - Jump
 Unity
 
 # Team
-Jeffrey - Artist / Programmer / Animation
-Andy - Artist
-Saqliyan - Programmer
-Tommy - Music / Artist
-Phuc
+- Jeffrey - Artist / Programmer / Animation
+- Andy - Artist
+- Saqliyan - Programmer
+- Tommy - Music / Artist
+- Phuc
